@@ -8,7 +8,6 @@ public class PlayerLocomotion : MonoBehaviour {
 
     
 
-	// Use this for initialization
 	void Start () {
         m_anim = GetComponent<Animator>();
 
@@ -16,13 +15,22 @@ public class PlayerLocomotion : MonoBehaviour {
 
     private void Update()
     {
-        if (Input.GetMouseButton(1))
+        if (Input.GetKey(KeyCode.Space))
         {
-            m_anim.SetBool("isAiming", true);
+            m_anim.SetBool("Jump", true);
         }
         else
         {
-            m_anim.SetBool("isAiming", false);
+            m_anim.SetBool("Jump", false);
+        }
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            m_anim.SetBool("Sprinting", true);
+        }
+        else
+        {
+            m_anim.SetBool("Sprinting", false);
         }
     }
 

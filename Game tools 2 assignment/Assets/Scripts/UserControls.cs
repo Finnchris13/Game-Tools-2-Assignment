@@ -9,12 +9,10 @@ public class UserControls : MonoBehaviour {
 
     private PlayerLocomotion m_locomotion;
 
-	// Use this for initialization
 	void Start () {
         m_locomotion = GetComponent<PlayerLocomotion>();
 	}
 	
-	// Update is called once per frame
 	void FixedUpdate () {
         m_forward = Input.GetAxis("Vertical");
         m_turn = Input.GetAxis("Horizontal");
