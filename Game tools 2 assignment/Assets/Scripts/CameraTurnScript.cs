@@ -15,11 +15,14 @@ public class CameraTurnScript : MonoBehaviour {
 	}
 	
 	public void Update () {
+        if (Input.GetKey(KeyCode.LeftAlt))
+        {
 
-        yaw += speedY * Input.GetAxis("Mouse X");
-        pitch -= speedV * Input.GetAxis("Mouse Y");
+            yaw += speedY * Input.GetAxis("Mouse X");
+            pitch -= speedV * Input.GetAxis("Mouse Y");
 
-        transform.eulerAngles = new Vector3(pitch, yaw, 0.0f);
-		
+            transform.eulerAngles = new Vector3(pitch, yaw, 0.0f);
+
+        }
 	}
 }

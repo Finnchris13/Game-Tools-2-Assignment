@@ -25,5 +25,14 @@ public class AimingScript : MonoBehaviour
         {
             m_anim.SetBool("isAiming", false);
         }
+
+        if (Input.GetMouseButton(1) && Input.GetMouseButtonDown(0))
+        {
+            m_anim.SetBool("Shoot", true);
+        }
+        else
+        {
+            m_anim.SetBool("Shoot", false);
+        }
     }
 }
