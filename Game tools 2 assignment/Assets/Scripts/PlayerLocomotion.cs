@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerLocomotion : MonoBehaviour {
 
@@ -31,6 +32,10 @@ public class PlayerLocomotion : MonoBehaviour {
         else
         {
             m_anim.SetBool("Sprinting", false);
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(0);
         }
     }
 

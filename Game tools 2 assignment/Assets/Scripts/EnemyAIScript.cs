@@ -16,6 +16,7 @@ public class EnemyAIScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
 		if (Vector3.Distance(destination, target.position) > 1.0f)
         {
             destination = target.position;

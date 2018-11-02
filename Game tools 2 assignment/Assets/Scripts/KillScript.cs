@@ -19,6 +19,14 @@ public class KillScript : MonoBehaviour {
         if(other.tag == "Arrow")
         {
             Destroy(gameObject);
+            ScoreScript.scoreValue += 50;
         }
+
+        if(other.tag == "Core")
+        {
+            Destroy(gameObject);
+            CoreHP.coreHealth -= 1;
+        }
+
     }
 }

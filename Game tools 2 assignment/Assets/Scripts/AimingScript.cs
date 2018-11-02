@@ -7,12 +7,14 @@ public class AimingScript : MonoBehaviour
 
     private Animator m_anim;
 
-
+    AudioSource m_audio;
+    public AudioClip Clip;
+    
 
     void Start()
     {
         m_anim = GetComponent<Animator>();
-
+        m_audio = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -33,6 +35,10 @@ public class AimingScript : MonoBehaviour
         else
         {
             m_anim.SetBool("Shoot", false);
+        }
+        if(Input.GetMouseButtonDown(1))
+        {
+            m_audio.PlayOneShot(Clip, 0.7f);
         }
     }
 }
